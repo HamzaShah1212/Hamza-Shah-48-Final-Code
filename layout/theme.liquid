@@ -1,0 +1,488 @@
+{{ 'application.css' | asset_url | stylesheet_tag }}
+{{ 'media.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="media.css">
+<style>
+.text-9xl{
+    font-size: 3em;
+    font-weight: bold;
+
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.txt{
+    position: relative;
+    right: -220px;
+
+    top: -20px;
+}    
+.p-8{
+    padding: 15px;
+}
+.shop-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.shop-button::after {
+    content: '→';
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.shop-button:hover::after {
+    color: yellow;
+}
+
+.shop-button:hover {
+    color: yellow;
+
+}
+.img{
+    position: relative;
+    
+}
+.img {
+    flex: 1;
+}
+
+.img img {
+    max-width: 100%;
+    height: auto;
+}
+.center{
+    background-color: beige;
+font-weight: bold;
+}
+.secondpart{
+    font-size: 2em;
+    padding: 1em;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .txt{
+    position: relative;
+    right: 20px;
+
+    top: -20px;
+}
+    .text-9xl {
+        font-size: 3rem;
+    }
+
+    .p-8 {
+        font-size: 1rem;
+    }
+}
+
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #f1f5f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f2937;
+        }
+
+        .slogan {
+            color: #4b5563;
+            font-size: 0.875rem;
+        }
+
+        .choose-gift-btn {
+            background-color: #facc15;
+            color: #1f2937;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .choose-gift-btn:hover {
+            background-color: #eab308;
+        }
+
+        /* Mobile Menu Icon */
+        .menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            color: #1f2937;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            padding: 1rem;
+            background-color: #f1f5f9;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .brand, .slogan, .choose-gift-btn {
+                display: none; /* Hide on mobile */
+            }
+
+            .menu-icon {
+                display: block; /* Show menu icon on mobile */
+            }
+        }
+/* Mobile (640px and up) */
+@media (max-width: 768px) {
+    .text-9xl {
+        font-size: 2.5rem;
+    }
+    
+    .p-8 {
+        font-size: 0.875rem;
+    }
+
+    
+
+}
+
+.center{
+    text-align: center;
+}
+ .shop-button{
+    position: relative;
+    right: -10em;
+    top: 5em;
+} 
+.img{
+    position: relative;
+    right: -10em;
+}
+/* Small Mobile (480px and up) */
+@media (max-width: 480px) {
+    .text-9xl {
+        font-size: 2rem;
+    }
+
+    .p-8 {
+        font-size: 0.75rem;
+    }
+
+    .btn .shop-button {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+    }
+    
+ 
+}
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+   background-color: red;
+    }
+}
+@media (max-width: 768px) {
+    .gallery-item {
+        grid-template-columns: repeat(2, 1fr);
+   background-color: red;
+    }
+}
+
+@media (max-width: 778px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+} 
+
+</style>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head> 
+
+<header>
+    <div class="container">
+                <div class="brand">TISSO VISION</div>
+        <div class="slogan">Find the ideal gift for your loved ones.</div>
+              <button class="choose-gift-btn">CHOOSE GIFT &rarr;</button>
+        <span class="menu-icon" id="menu-toggle">&#9776;</span>
+    </div>
+   <div class="mobile-menu" id="mobile-menu">
+        <div class="brand">TISSO VISION</div>
+        <div class="slogan">Find the ideal gift for your loved ones.</div>
+        <button class="choose-gift-btn" style="width: 100%;">CHOOSE GIFT &rarr;</button>
+    </div>
+</header>
+<div class="bg-white-200 py-6">
+    <div class="container mx-auto">
+        <img src="{{ 'Frame.png' | asset_url }}" alt="Gift Image" class="mx-auto">
+        </div>
+</div>
+<div class="main ">
+<div class="txt">
+<h2 class="text-5xl text-center  ">The Gift Guide</h2>
+<p class="p-8 h-5">
+    Discover Joy: Your Ultimate Holiday Gift Destination. <br> Explore our curated selection and find the perfect gifts to <br> delight your loved ones this holiday season.</p>
+<div class="btn">
+    <a href="#" id="op" class="shop-button  ">SHOP NOW </a>
+ 
+</div>
+    </div>
+
+<div class="img">
+    
+    <img src="{{ 'image.png' | asset_url }}" alt="Gift Image" class="mx-auto">
+    
+</div>
+</div>
+        </div>
+
+        <div class=" center">
+<p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZE XXS TO 6XL</p>
+        </div>
+        {% comment %} <div class="secondpart">
+            <h2>Tisso vision in the wild</h2>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="{{ 'Gallery1.PNG' | asset_url }}" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ 'gallery2.PNG' | asset_url }}" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ 'Gallery3.PNG' | asset_url }}" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ 'Gallery4.PNG' | asset_url }}" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ 'Gallery5.PNG' | asset_url }}" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ 'Gallery6.PNG' | asset_url }}" alt="Gallery Image 6">
+            </div>
+        </div> {% endcomment %}
+  
+
+        {% comment %} Pop Up Code {% endcomment %}
+        <div class="gallery">
+            <div class="gallery-item" onclick="showProductPopup('1')">
+                <img src="{{ 'Gallery1.PNG' | asset_url }}" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item" onclick="showProductPopup('2')">
+                <img src="{{ 'gallery2.PNG' | asset_url }}" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item" onclick="showProductPopup('3')">
+                <img src="{{ 'Gallery3.PNG' | asset_url }}" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item" onclick="showProductPopup('4')">
+                <img src="{{ 'Gallery4.PNG' | asset_url }}" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-item" onclick="showProductPopup('5')">
+                <img src="{{ 'Gallery5.PNG' | asset_url }}" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-item" onclick="showProductPopup('6')">
+                <img src="{{ 'Gallery6.PNG' | asset_url }}" alt="Gallery Image 6">
+            </div>
+        </div>
+        
+        <!-- Popup Modal -->
+      <!-- Gallery as before -->
+
+
+<!-- Popup Modal -->
+<div id="productPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img id="popupImage" src="" alt="Product Image">
+        <h2 id="popupName"></h2>
+        <p id="popupPrice"></p>
+        <p id="popupDescription"></p>
+
+        <!-- Color Selection -->
+        <div class="popup-section">
+            <label>Color</label>
+            <div id="popupColors" class="options">
+                <!-- Colors will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Size Selection -->
+        <div class="popup-section">
+            <label>Size</label>
+            <select id="popupSize" class="size-select">
+                <option value="">Choose your size</option>
+                <!-- Sizes will be dynamically added here -->
+            </select>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button onclick="addToCart()" class="add-to-cart">ADD TO CART</button>
+    </div>
+</div>
+
+
+        <script>
+            // Example product data (in a real app, you'd fetch this data from your backend or API)
+            const products = {
+    '1': {
+        name: 'Tailored Jacket',
+        price: '980,00€',
+        description: 'This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.',
+        colors: ['Blue', 'Black'],
+        sizes: ['S', 'M', 'L', 'XL'],
+        image: '{{ "Gallery1.PNG" | asset_url }}'
+    }
+    ,
+    '2': {
+        name: 'Tailored Jacket',
+        price: '980,00€',
+        description: 'This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.',
+        colors: ['Blue', 'Black'],
+        sizes: ['S', 'M', 'L', 'XL'],
+        image: '{{ "gallery2.PNG" | asset_url }}'
+    },
+    '3': {
+        name: 'Tailored Jacket',
+        price: '980,00€',
+        description: 'This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.',
+        colors: ['Blue', 'Black'],
+        sizes: ['S', 'M', 'L', 'XL'],
+        image: '{{ "Gallery3.PNG" | asset_url }}'
+    },
+    '4': {
+        name: 'Tailored Jacket',
+        price: '980,00€',
+        description: 'This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.',
+        colors: ['Blue', 'Black'],
+        sizes: ['S', 'M', 'L', 'XL'],
+        image: '{{ "Gallery4.PNG" | asset_url }}'
+    },
+    '5': {
+        name: 'Tailored Jacket',
+        price: '980,00€',
+        description: 'This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.',
+        colors: ['Blue', 'Black'],
+        sizes: ['S', 'M', 'L', 'XL'],
+        image: '{{ "Gallery5.PNG" | asset_url }}'
+    },
+    '6': {
+        name: 'Tailored Jacket',
+        price: '980,00€',
+        description: 'This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.',
+        colors: ['Blue', 'Black'],
+        sizes: ['S', 'M', 'L', 'XL'],
+        image: '{{ "Gallery6.PNG" | asset_url }}'
+    },
+    // Add other products if needed
+};
+
+function showProductPopup(productId) {
+    const product = products[productId];
+    if (product) {
+        document.getElementById('popupName').innerText = product.name;
+        document.getElementById('popupPrice').innerText = product.price;
+        document.getElementById('popupDescription').innerText = product.description;
+        document.getElementById('popupImage').src = product.image;
+
+        // Populate color options
+        const colorsContainer = document.getElementById('popupColors');
+        colorsContainer.innerHTML = '';
+        product.colors.forEach(color => {
+            const colorButton = document.createElement('button');
+            colorButton.innerText = color;
+            colorButton.onclick = () => selectColor(color);
+            colorsContainer.appendChild(colorButton);
+        });
+
+        // Populate size options
+        const sizeSelect = document.getElementById('popupSize');
+        sizeSelect.innerHTML = '<option value="">Choose your size</option>';
+        product.sizes.forEach(size => {
+            const sizeOption = document.createElement('option');
+            sizeOption.value = size;
+            sizeOption.innerText = size;
+            sizeSelect.appendChild(sizeOption);
+        });
+
+        document.getElementById('productPopup').style.display = 'flex';
+    }
+}
+
+function closePopup() {
+    document.getElementById('productPopup').style.display = 'none';
+}
+
+function addToCart() {
+    alert('Product added to cart!');
+    closePopup();
+}
+
+function selectColor(color) {
+    alert(`Selected color: ${color}`);
+}
+
+        </script>
+        

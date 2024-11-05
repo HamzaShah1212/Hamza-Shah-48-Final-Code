@@ -1,0 +1,109 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Styles for phones in portrait orientation */
+    #op {
+        font-size: 14px;
+position: relative;
+top: 200px;
+background-color: red;
+padding: 100em;
+}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Styles for phones in landscape orientation */
+    #op {
+        /* font-size: 14px;
+position: relative;
+top: -300px;
+
+padding: 100em; */
+}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #op {
+        right: -21em;
+        font-size: 14px;
+        position: relative;
+        top: -24px;
+        background-color: black;
+        padding: 1em;
+    }
+}
+
+/* Popup styling */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    border-radius: 8px;
+    text-align: left;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.popup-section {
+    margin-top: 15px;
+}
+.options {
+    display: flex;
+    gap: 10px;
+}
+.options button {
+    padding: 10px;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+.size-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+.add-to-cart {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/*  */
